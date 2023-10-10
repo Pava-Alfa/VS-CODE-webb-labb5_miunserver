@@ -1,0 +1,255 @@
+/*
+    jeer1902 23/4-23
+    project: Warframe in-game status application
+*/
+
+/* section unicue to each page when logged in*/
+#leftcontent {
+    float: left;
+    padding:10px 20px 10px;
+    background-color: rgba(142, 216, 241, 0.801);
+    border: 2px solid dimgray;
+    margin: 5px 5px 5px 0px;
+
+}
+
+/* section common to each user when logged in*/
+#sidebar{
+    padding:10px 20px 10px;
+    background-color: rgba(142, 216, 241, 0.801);
+    border: 2px solid dimgray;
+    margin: 5px 0px 5px 5px;
+}
+
+/*distrubutes the space for leftcontent and sidebar, which lays between the header and footer when logged in*/
+#grid2 {
+    display: grid;
+    width:100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*header when logged ina nad not logged in, grided in 3 blocks horisontaly*/
+#mainheader {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /*#block1 #block2 #block3*/
+    border: 2px solid dimgray;
+    margin-bottom: 5px;
+    min-width: 950px; /* keep tiltle in one row */
+
+}
+
+#block1 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2%;
+    background-color: rgba(142, 216, 241, 0.801);
+}
+
+#block2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(142, 216, 241, 0.801);
+}
+
+#block3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2%;
+    background-color: rgba(142, 216, 241, 0.801);
+}
+
+/* fonts and grid-display over at least 100VH or more(dependig on the amunt of content)*/
+body {
+    font-family: 'Open Sans',Helvetica,sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #333; /* textcolour */
+
+    /* Creates a webpage with minimum of 100vh and is dynamicly expandeble(the 1fr section inceases)*/
+    display:grid;
+    grid-template-rows: auto 1fr auto; /* grided verticaly: auto=header-height 1fr-betwwen-header_and_footer *auto=footer_height*/
+    min-height:100vh; /*minimum page height*/ 
+
+    overflow-x: hidden;
+    margin: 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    background-image: url(49921418432_5879c00ebe_k.jpg);
+
+}
+
+/*footer when logged in and not logged in*/
+#mainfooter{
+    text-align:center;
+    margin-top: 5px;
+    border: 2px solid dimgray;
+    background-color: rgba(142, 216, 241, 0.801);
+   }
+
+/*On the login pages between header and footer*/
+#login_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid dimgray;
+    background-color: rgba(142, 216, 241, 0.801);
+}
+
+/*the forms content is centre placed*/
+.login_form {
+    width: 40vw;
+    min-width: 200px;
+    min-height: 200px;
+    height: 50vh;
+    border: 2px solid dimgray;
+    background-color: rgb(142, 216, 241);
+    border-radius: 25px;
+    padding: 10px 10px 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* a class that place its elements in a block formation*/
+.rows {
+    display: block;
+    margin: 10px 10px 10px 10px;
+}
+
+#form-row-1{
+    margin: 10px 10px 10px;
+}
+
+#form-row-2{
+    margin: 10px 10px 10px;
+}
+
+/*the last form row content is centre placed*/
+#form-row-3 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px;
+}
+
+/*makes the labels and input types in the forms(exept add activity form) stuctured by line up the contents in the same way. */
+.form_label{
+    display: inline-block;
+    height: 2vh;
+    width: 15vw;
+    min-height: 20px;
+    min-width: 150px;
+}
+
+/* a class to centerplace a element within its rendered area, or many elements together inside of a div tag's rendered area */
+.centre_place{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Giving the activity another colour than the add activity form to separate thease two types of modules */
+.activity{
+    border-radius: 25px;
+    border: 2px solid dimgray;
+    background-color: rgb(127, 249, 186);
+    padding: 5px 5px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Not to small sized,  easier to notice the textbox if the cursor hovers above it, and a slighter thicker frame around it */
+
+.btn{
+    height: 5vh;
+    width: 15vw;
+    min-width: 150px;
+    min-height: 25px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: dimgray;
+    
+}
+
+
+.btn:hover {
+    background-color: lightskyblue;
+}
+
+/* Not to small sized,  easier to notice the textbox if the cursor hovers above it, and a slighter thicker frame around it */
+.textbox{
+    height: 20px;
+    border: 2px solid dimgray;
+}
+
+.textbox:hover {
+    background-color: lightskyblue;
+}
+
+/* To make the activities readeble of the pc viewport width decreases  */
+#preselected{
+    min-width: 350px;
+}
+
+#optional{
+    min-width: 350px;
+}
+
+/* Giving the hr bars a more appeiling look */
+.activity_separor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid dimgray;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Giving the add activity form colours and rounded edges */
+#add_activity_form{
+    border: 2px solid dimgray;
+    background-color: rgb(142, 216, 241);
+    border-radius: 25px;
+    padding: 5px 5px 5px;
+}
+
+/* Adjust the margin between each li tags in the unorded list */
+.usermenu_margins{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#submitted_login{
+    width: 40vw;
+    min-width: 400px;
+    min-height: 200px;
+    height: 50vh;
+    border: 2px solid dimgray;
+    background-color: rgb(142, 216, 241);
+    border-radius: 25px;
+    padding: 10px 10px 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submitted_register{
+    width: 40vw;
+    min-width: 400px;
+    min-height: 410px;
+    height: 55vh;
+    border: 2px solid dimgray;
+    background-color: rgb(142, 216, 241);
+    border-radius: 25px;
+    padding: 10px 10px 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
